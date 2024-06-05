@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html style="background: #fff5ee">
+<head>
+  <title>Welcome|Index</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .silver {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1000px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 8px; /* Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      margin: 20px auto;
+      text-align: center;
+      overflow: hidden; /* Hide overflowing content */
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center;
+      width: 98%;
+      height: 60px;
+      background-color: yellow; /* Change background color */
+      padding: 0 20px; /* Add padding */
+      margin: auto; /* Center horizontally */
+    }
+
+    .nav1 a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .nav1 a:hover {
+      text-decoration: underline;
+    }
+
+    .nav1 h5 {
+      font-family: Arial Black;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .silver a {
+      display: flex;
+      align-items: center;
+      color: #333; /* Dark text color */
+      text-decoration: none;
+      transition: color 0.2s;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .silver a:hover {
+      color: #008cba; /* Highlight color on hover */
+    }
+
+    .new-sticker {
+      position: relative;
+    }
+
+    .new-sticker::before {
+      content: "New";
+      display: inline-block;
+      background-color: red;
+      color: white;
+      padding: 2px 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 10px;
+      position: absolute;
+      top: -10px;
+      left: -5px;
+      animation: shine 1s infinite;
+    }
+
+    .box {
+      height: 170px;
+      width: 100%;
+      background-color: silver;
+      border-radius: 8px; /* Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      margin: 0 auto; /* Center horizontally */
+    }
+
+    .table-container {
+      margin-top: 20px;
+      margin-bottom: 20px; /* Added margin-bottom for spacing below tables */
+      border: 2px solid black; /* Added border for visual separation */
+      padding: 10px; /* Added padding for better spacing within the container */
+    }
+
+    p {
+      color: #ff6600;
+      font-weight: bold;
+      font-size: 45px;
+    }
+
+    /* Shining animation */
+    @keyframes shine {
+      0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes slide {
+      0%, 100% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(100%);
+      }
+    }
+
+    .slide-in-out {
+      animation: slide 100s infinite;
+    }
+
+    .content {
+      padding-left: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial Black;
+      color: blue;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-family: Arial Black;
+      color: brown;
+    }
+
+    h3 {
+      font-family: Arial Black;
+      color: red;
+    }
+
+    h4 {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-family: Arial Black;
+      color: brown;
+    }
+
+    h4 img {
+      margin-right: 20px;
+    }
+
+    h5 {
+      font-family: Arial Black;
+      color: blue;
+      font-size: 19px;
+      margin-top: 20px;
+    }
+
+    h6 {
+      font-family: Arial Black;
+      color: orange;
+      font-size: 19px;
+    }
+
+    table {
+      margin: auto;
+    }
+
+    /* Adding a scratched effect */
+    .scratched {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .image-box {
+      margin: 0 auto; /* Center horizontally */
+      width: 100%; /* Ensure the image spans the entire width */
+      max-height: 200px; /* Set a maximum height for the image box */
+      overflow: hidden; /* Hide any overflow content */
+      text-align: center; /* Center the image horizontally within its container */
+    }
+
+    .image-box img {
+      width: 100%; /* Make the image fill the entire width of its container */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Flexbox container for side-by-side layout */
+    .flex-container {
+      display: flex;
+      justify-content: space-around; /* Space items evenly */
+      flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    /* CSS for a box */
+    .box1, .box2 {
+      width: 300px;
+      height: 200px;
+      background-color: lightblue;
+      border: 2px solid #000; /* black border */
+      border-radius: 10px; /* rounded corners */
+      padding: 20px; /* space inside the box */
+      margin: 20px; /* space outside the box */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* shadow effect */
+      display: flex; /* for flexbox layout if needed */
+      flex-direction: column;
+      justify-content: center; /* center items horizontally */
+      align-items: center; /* center items vertically */
+    }
+
+    /* Example of text styling inside the box */
+    .box1 p, .box2 p {
+      font-family: 'Georgia', serif; /* Elegant serif font */
+      font-size: 18px; /* Slightly larger font size */
+      line-height: 1.6; /* Increased line height for readability */
+      color: #333; /* Dark grey text color */
+      margin: 20px 0; /* Vertical spacing */
+      text-align: justify; /* Justified text alignment */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    }
+
+    .styled-button {
+      background-color: #4CAF50; /* Green background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: 15px 32px; /* Some padding */
+      text-align: center; /* Centered text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Get it to show inline-block */
+      font-size: 16px; /* Increase font size */
+      margin: 4px 2px; /* Some margin */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 8px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .styled-button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <div class="image-box">
+      <img src="gre.png" alt="GRE Image">
+    </div>
+    </div>  
+   <div class="box1">
+	<h4>Schedule(s) for upcoming GRE</h4>
+        <p class="new-sticker">No upcoming schedules to show</p>
+   </div>
+ <h5 class="heading2">&copy; GRE TESTING PORTAL</h5>
+   	</footer>
+<script>
+let modebutton = document.createElement("button"); 
+  modebutton.innerText = "Change light/dark mode";
+  modebutton.className = "styled-button";
+  let currmode = "light";
+
+  modebutton.addEventListener("click",()=> {
+	if(currmode=="light"){
+		currmode = "dark";
+		document.querySelector("body").style.backgroundColor = "black";
+	}else{
+		currmode = "light";
+		document.querySelector("body").style.backgroundColor = "white";
+	}
+});
+document.body.appendChild(modebutton);
+document.querySelector(".heading2").style.textAlign = "center";
+document.querySelector(".heading2").style.backgroundColor = "pink";
+document.querySelector(".box1").style.height = "100px";
+document.querySelector(".box1").style.width = "1200px";
+let version = document.createElement("p");
+version.innerText = "Version 2.1.0";
+version.classList.add("version");
+document.body.appendChild(version);
+document.querySelector(".version").style.fontSize = "30px";
+
+document.querySelector(".version").style.textAlign = "center";
+document.querySelector(".version").style.backgroundColor = "red";
+</script>
+
+</body>
+</html>
